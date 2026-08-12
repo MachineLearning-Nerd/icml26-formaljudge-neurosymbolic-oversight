@@ -8,14 +8,15 @@
     "live_duplicate_gate",
     "live_contract_saved",
     "source_archive_and_pdf_pinned",
-    "claim_1_source_cpu_feasibility_audit"
+    "claim_1_source_cpu_feasibility_audit",
+    "claim_1_attempt_2_symbolic_formal_composition_toy"
   ],
   "failed_attempts": [],
   "claim_attempt_counts": {
     "1": 2
   },
   "last_checkpoint": "2026-08-03T20:40:00Z",
-  "last_known_git_commit": "c27edca223fcff8eaf855954d9007826a4e07404",
+  "last_known_git_commit": "7473e1df81f3f6a357005944d60382befebff239",
   "github_repository": "https://github.com/MachineLearning-Nerd/icml26-formaljudge-neurosymbolic-oversight",
   "publication_allowed": false,
   "compute_policy": "local CPU/local GTX 1050 only; no HF cpu-upgrade, Jobs, paid, or remote compute",
