@@ -1,0 +1,88 @@
+{
+  "schema_version": 1,
+  "repository": "MachineLearning-Nerd/icml26-formaljudge-neurosymbolic-oversight",
+  "former_repository": "MachineLearning-Nerd/icml26-repro-tnsQ23imeD-formaljudge-neurosymbolic-oversight",
+  "original_contract": {
+    "path": "contract/live_claims.json",
+    "claim_count": 1,
+    "max_points": 2,
+    "note": "The original anchored claim string is truncated. The five rows below are an explicit source-derived expansion."
+  },
+  "paper": {
+    "title": "FormalJudge: A Neuro-Symbolic Paradigm for Agentic Oversight",
+    "authors": [
+      "Jiayi Zhou",
+      "Yang Sheng",
+      "Hantao Lou",
+      "Yaodong Yang",
+      "Jie Fu"
+    ],
+    "arxiv": "2602.11136v1",
+    "openreview": "tnsQ23imeD",
+    "url": "https://arxiv.org/abs/2602.11136",
+    "implementation_url": "https://github.com/htlou/FormalJudge"
+  },
+  "overall_verdict": "INCONCLUSIVE_SCOPED_TO_SOURCE_AND_BOUNDED_TOY",
+  "publication_allowed": false,
+  "branches": [
+    "main"
+  ],
+  "claims": [
+    {
+      "id": "C1",
+      "status": "unverified",
+      "paper_claim": "FormalJudge improves oversight accuracy by an average of 16.6% over LLM-as-a-Judge baselines across three benchmarks and seven agent models.",
+      "paper_production": "Run Agent-SafetyBench, VitaBench, and Deceivers with FormalJudge and baseline judges, establish labels, and aggregate accuracy.",
+      "local_evidence": [
+        "outputs/claim1_source_audit/summary.json",
+        "CLAIM_EVIDENCE.md"
+      ],
+      "limitation": "No models, benchmark data, labels, calls, or accuracy aggregation are present."
+    },
+    {
+      "id": "C2",
+      "status": "unverified",
+      "paper_claim": "The main benchmark table reports FormalJudge values including 77.28% and 80.54% on Agent-SafetyBench.",
+      "paper_production": "Extract atomic facts, synthesize Dafny specifications, execute Dafny/Boogie/Z3, and compare verdicts to benchmark labels.",
+      "local_evidence": [
+        "SOURCE_AUDIT.md",
+        "CLAIM_EVIDENCE.md"
+      ],
+      "limitation": "No extraction, formal runtime, labels, or independent table is present."
+    },
+    {
+      "id": "C3",
+      "status": "unverified",
+      "paper_claim": "A 7B judge detects deception from 72B agents at above 90% accuracy.",
+      "paper_production": "Run the Qwen judge-agent matrix on Deceivers, extract atomic deception facts, formally compose predicates, and score 200 deceptive plus 200 non-deceptive trajectories per agent size.",
+      "local_evidence": [
+        "SOURCE_AUDIT.md",
+        "CLAIM_EVIDENCE.md"
+      ],
+      "limitation": "No Deceivers data, model calls, or weak-to-strong results are present."
+    },
+    {
+      "id": "C4",
+      "status": "unverified",
+      "paper_claim": "Dafny-guided iterative refinement improves accuracy from 70.7% to 99.8% over three rounds.",
+      "paper_production": "Feed formal specifications and concrete violations back to agents, regenerate for three rounds, and measure safety accuracy.",
+      "local_evidence": [
+        "SOURCE_AUDIT.md",
+        "CLAIM_EVIDENCE.md"
+      ],
+      "limitation": "No model output, refinement trace, Dafny run, or round metric is present."
+    },
+    {
+      "id": "C5",
+      "status": "toy_source_audit",
+      "paper_claim": "Reliability comes from atomic extraction followed by deterministic logical composition.",
+      "paper_production": "Decompose intent, extract binary grounded facts, generate formal predicates, and let the SMT verifier compute the final verdict.",
+      "local_evidence": [
+        "outputs/claim1_symbolic_trip_toy/summary.json",
+        "outputs/claim1_symbolic_trip_toy/raw.json",
+        "outputs/claim1_symbolic_trip_toy/PROTOCOL.json"
+      ],
+      "limitation": "The toy uses fixed propositional inputs and Python logic; it has no semantic extraction, Dafny, or Z3."
+    }
+  ]
+}

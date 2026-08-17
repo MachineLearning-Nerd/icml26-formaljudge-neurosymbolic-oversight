@@ -1,10 +1,12 @@
-# FormalJudge: Source-Pinned Reproduction Audit
+# FormalJudge: ICML 2026 Reproduction Audit
 
 This repository tracks a source-pinned, claim-by-claim audit of:
 
 > **FormalJudge: A Neuro-Symbolic Paradigm for Agentic Oversight**
 
 The repository is intentionally evidence-first. It contains a deterministic symbolic composition toy and a source-feasibility audit; it does **not** contain the paper's LLM benchmark runs, Claude judge calls, Dafny/Z3 execution environment, or reported accuracy tables.
+
+The repository has the standardized name `icml26-formaljudge-neurosymbolic-oversight`; its former name was `icml26-repro-tnsQ23imeD-formaljudge-neurosymbolic-oversight`. The complete audit record is in `CLAIM_EVIDENCE.md`, `SOURCE_AUDIT.md`, `REPORT.md`, and `BRANCH_AUDIT.md`.
 
 | Resource | Link |
 | --- | --- |
@@ -16,11 +18,11 @@ The repository is intentionally evidence-first. It contains a deterministic symb
 
 ## Current status
 
-**Overall result: inconclusive.** The completed local work audits the method description and runs a three-case finite propositional composition toy based on the paper's trip-booking example. It does not reproduce Claude-4.5-Opus judging, LLM atomic-fact extraction, Dafny/Z3 verification, or any benchmark percentage.
+**Overall result: inconclusive, scoped to a source audit and bounded toy.** The completed local work audits the method description and runs a three-case finite propositional composition toy based on the paper's trip-booking example. It does not reproduce Claude-4.5-Opus judging, LLM atomic-fact extraction, Dafny/Z3 verification, or any benchmark percentage.
 
 The current compute policy allows local CPU and a local GTX 1050 only. It does not allow Hugging Face upgrades, remote compute, paid compute, or jobs. The machine-readable state records this as `publication_allowed: false`.
 
-The next repository action is an independent review of the symbolic toy against the paper's literal Formal-of-Thought composition path.
+The dossier is published and verified. `publication_allowed` is false. The original one-claim contract is preserved as provenance; `claims.json` records the explicit five-claim expansion derived from the pinned paper source.
 
 ## What the paper does
 
@@ -52,6 +54,16 @@ The paper evaluates this framework on Agent-SafetyBench, VitaBench, and Deceiver
 | `src/claim1_symbolic_trip_toy.py` | Deterministic finite fact-composition toy |
 | `tests/` | Minimal contract and toy checks |
 | `.trackio/logbook/` | Audit log for the bounded toy attempt |
+| `CLAIM_EVIDENCE.md` | Claim-to-evidence ledger and production paths |
+| `SOURCE_AUDIT.md` | Pinned source hashes and source-location audit |
+| `ENVIRONMENT.md` | Compute policy and paper-scale reproduction boundary |
+| `REPORT.md` | Final scoped verdict and limitations |
+| `CITATION.cff` | Machine-readable citation for the paper |
+| `AUTHOR_THANK_YOU.md` | Thank-you note to the paper authors |
+| `BRANCH_AUDIT.md` | Public/local branch and commit-attribution audit |
+| `claims.json` | Machine-readable five-claim expansion |
+| `EVIDENCE_MANIFEST.json` | Hash manifest for the published audit state |
+| `verify_final.py` | Fail-closed local and fresh-clone verifier |
 
 The toy composes three explicit facts—budget compliance, flying status, and hotel start date—into the conditional rule “if flying, hotel starts on or after arrival.” It checks one violation, one compliant flight, and one budget control. It does not perform natural-language extraction or invoke Dafny/Z3.
 
@@ -63,7 +75,7 @@ The final published branch is:
 | --- | --- | --- |
 | `main` | Source-pinned FormalJudge reproduction audit | Contains the pinned paper artifacts, source audit, symbolic toy, and this README |
 
-The repository originally had a stale `master` branch containing only the initial source-pinned commit. `main` already contained that history plus the later toy checkpoints; the cleanup makes `main` the default and removes the redundant published `master` branch. The old state remains available locally on the attribution backup ref.
+The repository originally had a stale `master` branch containing only the initial source-pinned commit. `main` already contained that history plus the later toy checkpoints; the cleanup makes `main` the default and removes the redundant published `master` branch. The obsolete local attribution backup ref was also removed; its history is not part of the public branch set.
 
 ## Claim ledger: what each claim means and how it is produced
 
@@ -85,7 +97,7 @@ It is important to distinguish three statements:
 2. **Source-audited:** the paper source or a repository artifact has been pinned and inspected.
 3. **Reproduced here:** this repository independently ran the relevant experiment and stored verifiable output.
 
-This repository supports the second category and one deliberately bounded piece of the third. It does not support the paper-level benchmark claims.
+This repository supports the second category and one deliberately bounded piece of the third. It does not support the paper-level benchmark claims. `REPORT.md` records the final decision and `CLAIM_EVIDENCE.md` gives the expanded claim-by-claim boundary.
 
 ```text
 verdict: inconclusive
@@ -100,6 +112,7 @@ Claude-4.5-Opus benchmark executed: no
 From the repository root:
 
 ```bash
+python3 verify_final.py
 python3 src/claim1_symbolic_trip_toy.py --out outputs/claim1_symbolic_trip_toy
 python3 -m pytest -q tests/test_contract.py tests/test_claim1_symbolic.py  # if pytest is installed
 shasum -a 256 evidence/source/arxiv-2602.11136.pdf

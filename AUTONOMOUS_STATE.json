@@ -1,23 +1,39 @@
 {
   "schema_version": 1,
   "openreview_id": "tnsQ23imeD",
-  "phase": "claim_1_attempt_2_symbolic_formal_composition_toy_complete",
-  "next_action": "independent_review_claim_1_symbolic_toy_against_literal_formal_of_thought_composition",
+  "phase": "published_and_verified",
+  "next_action": "select_next_icml_repository",
   "active_run_ids": [],
   "completed_milestones": [
     "live_duplicate_gate",
     "live_contract_saved",
     "source_archive_and_pdf_pinned",
     "claim_1_source_cpu_feasibility_audit",
-    "claim_1_attempt_2_symbolic_formal_composition_toy"
+    "claim_1_attempt_2_symbolic_formal_composition_toy",
+    "repository_and_branch_normalization",
+    "standardized_dossier_published",
+    "dossier_manifest_and_final_verifier",
+    "fresh_clone_verification"
   ],
   "failed_attempts": [],
   "claim_attempt_counts": {
     "1": 2
   },
-  "last_checkpoint": "2026-08-03T20:40:00Z",
-  "last_known_git_commit": "7473e1df81f3f6a357005944d60382befebff239",
+  "last_checkpoint": "2026-08-17T03:00:00Z",
+  "last_known_git_commit": "1c7fd792d4562fcfaa77931a5d93b4d8ad6eda36",
   "github_repository": "https://github.com/MachineLearning-Nerd/icml26-formaljudge-neurosymbolic-oversight",
+  "former_github_repository": "https://github.com/MachineLearning-Nerd/icml26-repro-tnsQ23imeD-formaljudge-neurosymbolic-oversight",
+  "overall_verdict": "INCONCLUSIVE_SCOPED_TO_SOURCE_AND_BOUNDED_TOY",
+  "branch_set": [
+    "main"
+  ],
+  "claim_statuses": {
+    "C1": "unverified",
+    "C2": "unverified",
+    "C3": "unverified",
+    "C4": "unverified",
+    "C5": "toy_source_audit"
+  },
   "publication_allowed": false,
   "compute_policy": "local CPU/local GTX 1050 only; no HF cpu-upgrade, Jobs, paid, or remote compute",
   "claim_1_outcome": {

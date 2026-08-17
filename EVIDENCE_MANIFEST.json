@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "repository": "MachineLearning-Nerd/icml26-formaljudge-neurosymbolic-oversight",
+  "excluded": [
+    "AUTONOMOUS_STATE.json",
+    "EVIDENCE_MANIFEST.json"
+  ],
+  "files": [
+    {"path": ".gitignore", "sha256": "e99b7add8e9698ee6c0c85abb6ded84d183c2099f5f5d752ab54ed47f8e70b4d"},
+    {"path": ".trackio/logbook/pages/claim-1-formaljudge-toy/page.md", "sha256": "0e3e2498f1f9cd4c0c6c32d9e67af214b55a2fe0b0c1bc33bef96bf69e10c54d"},
+    {"path": "AUTHOR_THANK_YOU.md", "sha256": "080a04442d3e318cc0d6381d4910191d7ad9f81e76a8a48e0f2d2da4b3840ff5"},
+    {"path": "BRANCH_AUDIT.md", "sha256": "e7b521785bcd67fb45a1d4e2eedfbc692e914b334d81826bb8f8bfcda97ddd16"},
+    {"path": "CITATION.cff", "sha256": "094d39d0b1f715af910cf5e0ebeac43d6da5b579eda7a59f3beff56687489b4f"},
+    {"path": "CLAIM_EVIDENCE.md", "sha256": "509c1874cd32bb76ca31292d5e9da2c00f7c8cb33c6f0c265601f827afaadd31"},
+    {"path": "ENVIRONMENT.md", "sha256": "1d11d43a8fb17c517e828a28c0761dea2a176e28de39cf66f5d83c59a0f2fa92"},
+    {"path": "README.md", "sha256": "4ccd78bae8917bd0e5de4bafc2edc745c2956c1644eb078aeb9cb4be6fd0a4ac"},
+    {"path": "REPORT.md", "sha256": "3a6daee20fcac37d1faadff59f297ea9ca3454dfed0c77cd92c6011cc93696fc"},
+    {"path": "SOURCE_AUDIT.md", "sha256": "c04270dcb86afa3dafa9e6d8a113e2e3f57db299c36244482af0a603051b5184"},
+    {"path": "STATUS.md", "sha256": "f9a4ffd3f22454d4950099d26981c94198db978d9893e356c357a729453ecb31"},
+    {"path": "branch-audit.md", "sha256": "6f11e7869758739961dfece87d7953bc7c04f63fccc34ca7e469234fb29bf4e4"},
+    {"path": "claims.json", "sha256": "03b803a6f2b7acd61ec53baa22fab60bdf5b17b101635a9c0f02178d746a57ac"},
+    {"path": "contract/SOURCE_SNAPSHOT.json", "sha256": "411686d29a483f7bee8d499d79a91b8056874b252b61eb7a3d68e92746cb3269"},
+    {"path": "contract/live_claims.json", "sha256": "3596c247a384c0bb7fcfcfade5e394d533baeb8a23868ede6bcfa7f7098aece7"},
+    {"path": "evidence/source/SHA256SUMS", "sha256": "658d09cdbc8482470b650d9b2d498eb281b36cf4f903e9563dd139f7fff6bbdd"},
+    {"path": "evidence/source/arxiv-2602.11136-source.tar.gz", "sha256": "48387dc382f94be29a51e2570e3f57ed05b49ee93272a1940028468e9542fff8"},
+    {"path": "evidence/source/arxiv-2602.11136.pdf", "sha256": "b635896b5f22a51bfe4ca59aa3c0d3b9141353a34426f0d5c00f664b22ac76af"},
+    {"path": "outputs/claim1_source_audit/SHA256SUMS", "sha256": "3ea7667733560576fd547f24fbda011a7d195b45fcfce3b1f57c19294505d95f"},
+    {"path": "outputs/claim1_source_audit/summary.json", "sha256": "59b9f5b9923b05c13f006ea5ca546a6907440f91a881f4ee7f23bb677a8555a2"},
+    {"path": "outputs/claim1_symbolic_trip_toy/PROTOCOL.json", "sha256": "c37e6e07fb088b1758625dd459ddadc4608212f7b8cdc0eb68d93b19f222ee36"},
+    {"path": "outputs/claim1_symbolic_trip_toy/SHA256SUMS", "sha256": "2cd5e55f13be7cf84f57b6379dd3551c769b32ae5c16f7a6dbd1e3a2cf3f13f3"},
+    {"path": "outputs/claim1_symbolic_trip_toy/raw.json", "sha256": "89012022a2a49346b380e501239bc0e94a13102b85bbf43e4f1f7353b71e59cb"},
+    {"path": "outputs/claim1_symbolic_trip_toy/summary.json", "sha256": "1f151dacee487cf761789d4022eaf1002aa21f270a24568a767b5c315b2e2c5a"},
+    {"path": "src/claim1_symbolic_trip_toy.py", "sha256": "44e4a1f3f6e4fbc34f97e236136ca4ab2ff006e159c2a5e96e046840b8da61b4"},
+    {"path": "tests/test_claim1_symbolic.py", "sha256": "11e92920a5b9be5cec95a1ad94f1082b5705ddcfcbb14427353cbff9c116f8ce"},
+    {"path": "tests/test_contract.py", "sha256": "cb85f354897b7933ec76f9e23d8399f34a0b708a2cbdc1a78efdfaa6fe9de565"},
+    {"path": "verify_final.py", "sha256": "285ae2b8aed8de0dc99f63c7991d5a3a7d187ef4a69b057396844dd84d48fe7b"}
+  ]
+}

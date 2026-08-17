@@ -1,0 +1,38 @@
+cff-version: 1.2.0
+message: "If you use this audit or the paper, please cite the original work."
+title: "FormalJudge: A Neuro-Symbolic Paradigm for Agentic Oversight"
+type: article
+authors:
+  - family-names: Zhou
+    given-names: Jiayi
+  - family-names: Sheng
+    given-names: Yang
+  - family-names: Lou
+    given-names: Hantao
+  - family-names: Yang
+    given-names: Yaodong
+  - family-names: Fu
+    given-names: Jie
+year: 2026
+version: "arXiv:2602.11136v1"
+url: "https://arxiv.org/abs/2602.11136"
+repository-code: "https://github.com/MachineLearning-Nerd/icml26-formaljudge-neurosymbolic-oversight"
+abstract: "A neuro-symbolic framework for agentic oversight that uses LLMs for atomic fact extraction and formal logic for deterministic composition."
+preferred-citation:
+  type: article
+  title: "FormalJudge: A Neuro-Symbolic Paradigm for Agentic Oversight"
+  authors:
+    - family-names: Zhou
+      given-names: Jiayi
+    - family-names: Sheng
+      given-names: Yang
+    - family-names: Lou
+      given-names: Hantao
+    - family-names: Yang
+      given-names: Yaodong
+    - family-names: Fu
+      given-names: Jie
+  year: 2026
+  journal: "arXiv"
+  volume: "2602.11136"
+  url: "https://arxiv.org/abs/2602.11136"
